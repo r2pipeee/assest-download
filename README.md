@@ -1,2 +1,2 @@
 # assest-download
-icons and assest for vexa
+icons and assest download for projects
