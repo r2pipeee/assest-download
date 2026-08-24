@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Download</title>
+    <title>CATLOG‑STORE</title>
     <style>
         * {
             margin: 0;
@@ -22,24 +22,53 @@
         }
         .container {
             text-align: center;
+            max-width: 500px;
+            width: 100%;
         }
-        .download-btn {
+        .store-heading {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #007aff;
+            padding-bottom: 12px;
+            display: inline-block;
+        }
+        .app-item {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.15s ease;
+        }
+        .app-item:hover {
+            transform: scale(1.01);
+        }
+        .app-item .app-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+        .app-item .download-btn {
             display: inline-block;
             background: #007aff;
             color: #fff;
-            font-size: 20px;
-            font-weight: 600;
-            padding: 16px 48px;
-            border-radius: 40px;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 12px 32px;
+            border-radius: 30px;
             text-decoration: none;
             transition: background 0.2s ease, transform 0.1s ease;
-            box-shadow: 0 4px 14px rgba(0, 122, 255, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.25);
         }
-        .download-btn:hover {
+        .app-item .download-btn:hover {
             background: #005bbf;
             transform: scale(1.02);
         }
-        .download-btn:active {
+        .app-item .download-btn:active {
             transform: scale(0.97);
         }
         .footer {
@@ -59,30 +88,53 @@
             color: #333;
             font-weight: 300;
         }
-        /* Hidden by default */
         .hidden {
             display: none !important;
+        }
+        /* Premium note (optional) */
+        .premium-note {
+            font-size: 12px;
+            color: #999;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
         }
     </style>
 </head>
 <body>
 
     <!-- ====== STATUS FLAG ====== -->
-    <!-- Set to true to show the download page, false to show "page is down" -->
+    <!-- Set to true to show the store, false to show "page is down" -->
     <script>
-        const STATUS = true; // Change to false to take the page offline
+        const STATUS = true; // Change to false to take the store offline
     </script>
     <!-- ========================= -->
 
+    <!-- Normal store content -->
     <div id="normalContent" class="container">
-        <!-- Download button -->
-        <a href="ver-amplifier-android.apk" class="download-btn" download>⬇ Download</a>
+        <div class="store-heading">CATLOG‑STORE</div>
+
+        <!-- App 1: Minecraft AFK Launcher -->
+        <div class="app-item">
+            <div class="app-name">🎮 Minecraft AFK Launcher</div>
+            <a href="afklauncher.apk" class="download-btn" download>⬇ Download</a>
+        </div>
+
+        <!-- App 2: Android Amplifier -->
+        <div class="app-item">
+            <div class="app-name">🔊 Android Amplifier</div>
+            <a href="ver-amplifier-android.apk" class="download-btn" download>⬇ Download</a>
+        </div>
+
+        <!-- Optional premium notice -->
+        <div class="premium-note">Premium app download link – do not share</div>
 
         <div class="footer">
             <a href="terms.html" target="_blank">Terms &amp; Conditions</a>
         </div>
     </div>
 
+    <!-- Offline message -->
     <div id="downContent" class="down-message hidden">
         The page is down
     </div>
