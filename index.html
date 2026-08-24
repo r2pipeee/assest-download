@@ -54,18 +54,49 @@
         .footer a:hover {
             text-decoration: underline;
         }
+        .down-message {
+            font-size: 24px;
+            color: #333;
+            font-weight: 300;
+        }
+        /* Hidden by default */
+        .hidden {
+            display: none !important;
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Download button – points to launcher.apk -->
+    <!-- ====== STATUS FLAG ====== -->
+    <!-- Set to true to show the download page, false to show "page is down" -->
+    <script>
+        const STATUS = true; // Change to false to take the page offline
+    </script>
+    <!-- ========================= -->
+
+    <div id="normalContent" class="container">
+        <!-- Download button -->
         <a href="launcher.apk" class="download-btn" download>⬇ Download</a>
 
         <div class="footer">
             <a href="terms.html" target="_blank">Terms &amp; Conditions</a>
         </div>
     </div>
+
+    <div id="downContent" class="down-message hidden">
+        The page is down
+    </div>
+
+    <script>
+        // Show/hide based on STATUS
+        if (STATUS === true) {
+            document.getElementById('normalContent').classList.remove('hidden');
+            document.getElementById('downContent').classList.add('hidden');
+        } else {
+            document.getElementById('normalContent').classList.add('hidden');
+            document.getElementById('downContent').classList.remove('hidden');
+        }
+    </script>
 
 </body>
 </html>
