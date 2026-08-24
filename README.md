@@ -1,4 +1,4 @@
-# ⚠️ EDUCATIONAL USE ONLY – USE AT YOUR OWN RISK
+# ⚠️ EDUCATIONAL USE ONLY – DONT DOWNLOAD ANYFILE FROM THIS REPO ITS PRIVET 
 
 **This repository and its contents are provided strictly for educational and research purposes.**
 
